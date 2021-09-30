@@ -1,0 +1,41 @@
+/*Landing Logo Animation*/
+
+@keyframes logo {
+  0% {
+    transform: translateY(-70px); opacity: 0;
+  }
+  100% {
+    transform: translateY(0px); opacity: 1;
+  }
+}
+
+/* Landing Text Animation */
+@keyframes txt {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Mobile Menu Animation */
+@keyframes icon-ani {
+  0%{width: 100%;}
+  50%{width: 0%;}
+  100%{width: 100%;}
+}
+
+/* Page 2 Middle Logo Animation */
+@keyframes txt_up {
+  0%{transform: translateY(70px); opacity: 0;}
+  100%{transform: translateY(0); opacity: 1;}
+}
+
+/* Page 3 Animation */
+@keyframes slideup {
+  0%{transform: translateY(200px); opacity: 0;}
+  45%{transform: translateY(-15px);}
+  70%{transform: translateY(15px);}
+  100%{transform: translateY(0); opacity: 1;}
+}

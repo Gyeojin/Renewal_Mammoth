@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 사이즈 관련 ex) 아이폰 자동확대기능 막아줌 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Nanum Font Link -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+  <!-- Google Font Link -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
+
+  <title id="text"></title>
+
+  <!-- Full Page Plugin Link -->
+  <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
+
+  <!-- Reset CSS Link -->
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Main CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!--Animation CSS link-->
+  <link rel="stylesheet" href="css/animation.css">
+
+  <!-- Media Query CSS Link -->
+  <link rel="stylesheet" href="css/media.css">
+
+  <!-- Title Typing Effect (홈페이지 이름 타이핑효과)-->
+  <script>
+    const string = "MAMMOTH COFFEE";
+    const array = string.split('');
+    //console.log(array);
+
+    let timer;
+
+    function frameLooper(){
+      if(array.length > 0){
+        document.getElementById("text").innerHTML += array.shift();
+      } else {
+        clearTimeout(timer);
+      }
+
+      timer = setTimeout('frameLooper()', 200);
+    }
+
+    frameLooper();
+  </script>
+
+</head>
+<body>
+  <div class="wrap" id="fullpage">
+
+    <div class="overlay"></div>
+
+    <!-- PC Frame Header and navigation -->
+    <header class="header" id="header">
+      <div class="center">
+
+        <!-- Mobile Menu Icon -->
+        <div class="menu_icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile_nav">
+          <ul class="mobile_inner">
+            <li class="mobile_li">
+              <div class="mobile_logo_box">
+                <a href="#" class="mobile_logo"></a>
+              </div>
+              <div class="close_btn">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">ABOUT US</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">메머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">메머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드 커피</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                <li class="mobile_sub_li"><a href="#">신제품</a></li>
+                <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드 익스프레스</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">메머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">메머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">STORE</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">메머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">메머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- PC Navigation -->
+        <div class="logo">
+          <a href="#" class="logo_link"></a>
+        </div>
+        <ul class="topnav">
+          <li><a href="#">about us</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">store</a></li>
+          <li><a href="#">franchise</a></li>
+          <li><a href="#">customer</a></li>
+          <li><a href="#">event</a></li>
+        </ul>
+      </div>
+
+      <!-- Hidden Mega Box Menu -->
+      <div class="hidden_sub">
+        <div class="line"></div>
+        <div class="sub_nav">
+          <div class="subnav_box box_1">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 01</li>
+              <li><a href="#">메머드커피 02</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_2">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 03</li>
+              <li><a href="#">메머드커피 04</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+            <ul>
+              <li class="sub_nav_tit">메머드커피 03-1</li>
+              <li><a href="#">메머드커피 04</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_3">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 05</li>
+              <li><a href="#">메머드커피 06</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_4">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 07</li>
+              <li><a href="#">메머드커피 08</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_5">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 09</li>
+              <li><a href="#">메머드커피 10</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_6">
+            <ul>
+              <li class="sub_nav_tit">메머드커피 11</li>
+              <li><a href="#">메머드커피 12</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End of Center Tag -->
+    </header>
+
+    <!-- Page 1 Section -->
+    <section class="page_1 section" data-anchor="1st">
+      <div class="main_msg">
+        <div class="logo_box">
+          <img src="img/page01_logo.png" alt="logo">
+        </div>
+        <div class="main_txt">
+          <h2>맛, 멋, 그리고 진심</h2>
+        </div>
+        <div class="btn_box">
+          <a href="#">매머드 커피</a>
+          <a href="#">매머드 익스프레스</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page_2 section" data-anchor="2nd">
+      <div class="center">
+        <div class="phone-img">
+          <img src="img/page02_iphone.png" alt="iphoneimg">
+        </div>
+        <div class="page_txt_box">
+          <div class="main_txt">
+            <h2>맛, 멋 그리고 진심</h2>
+          </div>
+          <div class="page_logo"></div>
+          <div class="page_2_txt">
+            <p>매머드커피는 커피에 대한 지속적인 연구개발을 통해</p>
+            <p>우수한 품질의 커피와 음료를 합리적인 가격으로</p>
+            <p>소비자에게 제공하기 위해 노력하겠습니다.</p>
+          </div>
+          <div class="btn_box">
+            <a href="#">매장찾기</a>
+            <a href="#">메뉴보기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page_3 section" data-anchor="3rd">
+      <div class="half_bg"></div>
+      <div class="page_body">
+        <div class="page_title slide_title">
+          <p>EVENT</p>
+        </div>
+        <div class="page_sub_title slide_sub_title">
+          <p>매일매일 <span>다양한 이벤트</span>에 참여하세요.</p>
+        </div>
+        <!-- Slide Contents -->
+        <div class="slides">
+          <div class="slide_box">
+            <ul class="slide_inner">
+              <!-- li Start -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_01.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+              <!-- li Start -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_02.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+              <!-- li Start -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_03.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+              <!-- li Start -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_04.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_01.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+              <!-- li Start -->
+              <li class="slide_li">
+                <a href="#">
+                  <div class="slide_img">
+                    <img src="img/slide_02.png" alt="slideimage">
+                  </div>
+                  <div class="slide_txt">
+                    <p>매머드커피, 봄을 부탁해! 3월 신메뉴 이름 맞추기 이벤트</p>
+                    <p>기간 : 2021-07-08 ~ 2021-07-25</p>
+                  </div>
+                </a>
+              </li>
+              <!-- li End -->
+            </ul>
+          </div>
+        </div>
+        <div class="slide_arr_btn">
+          <div class="arr_prev"></div>
+          <div class="arr_next"></div>
+        </div>
+        <div class="slide_btn">
+          <a href="#">더보기</a>
+        </div>
+      </div>
+    </section>
+    <section class="section footer" data-anchor='4th'>
+      <div class="center">
+        <div class="page_inner">
+          <div class="page_logo"></div>
+          <ul class="footer_btn">
+            <li><a href="#">브랜드 소개</a></li>
+            <li><a href="#">보도자료</a></li>
+            <li><a href="#">창업안내</a></li>
+            <li><a href="#">오시는길</a></li>
+          </ul>
+          <div class="footer_txt">
+            <p>본사: 서울특별시 강남구 논현로 159길 34 (주)매머드커피랩 (우)06029 / 영남센터: 부산광역시 남구 문현 금융로 40, A동 2층 222호 (우)48400</p>
+            <p>대표이사 : 김범수, 최경환 | 대표번호 : 02-515-1645 | 대표메일 : help@mammoth.coffee</p>
+            <p>제안서 수신 전용 메일 : offer@mammoth.coffee | 마케팅 및 제휴 관련문의 : pr@mammoth.coffee</p>
+            <p>Copyright (c) 2017 MAMMOTH COFFEE. All right reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+  <!-- jQuery Framework Load -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Full Page Plugin Load -->
+  <script src="fullpage_lib/jquery.fullpage.js"></script>
+  <!-- Full Page Plugin Custom Load -->
+  <script src="js/fullpage_code.js"></script>
+
+  <!--Main jQuery File Load-->
+  <script src="js/jq.main.js"></script>
+</body>
+</html>
